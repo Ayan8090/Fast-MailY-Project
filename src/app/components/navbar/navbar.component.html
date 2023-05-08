@@ -1,0 +1,63 @@
+
+
+
+<mat-drawer-container class="example-container">
+
+  <mat-drawer  #drawer class="sidebar">
+
+    <mat-list >
+      <div *ngFor="let item of sideNav">
+      <mat-list-item  class="sideNav-item">
+        <a routerLink={{item.Link}} class=" itmes-name" >{{item.title}}</a>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+
+    </div>
+    <mat-list-item  class="sideNav-item">
+      <a  (click)="onLogout()" class=" itmes-name" >Logout</a>
+      <mat-divider></mat-divider>
+    </mat-list-item>
+
+    </mat-list>
+
+
+  </mat-drawer>
+
+  <mat-drawer-content>
+
+
+
+<mat-toolbar class="w-100" color="primary">
+  <button (click)="drawer.toggle()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+   <mat-icon >menu</mat-icon>
+ </button>
+ <span>My App</span>
+ <span class="example-spacer"></span>
+
+ <div class="demo-section">
+
+  <!-- <button matBadge="7" [matBadgeHidden]="hidden" matBadgeColor="accent" (click)="toggleBadgeVisibility()" mat-icon-button color="accent" aria-label="Example icon button with a menu icon">
+    <mat-icon>home</mat-icon>
+  </button> -->
+
+</div>
+
+ <button mat-button [matMenuTriggerFor]="menu">{{user.name}}</button>
+ <button (click)="onLogout()" mat-button>Logout</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>Profile</button>
+  <button mat-menu-item>More</button>
+</mat-menu>
+
+
+</mat-toolbar>
+
+
+<app-welcome-page></app-welcome-page>
+
+
+  </mat-drawer-content>
+
+</mat-drawer-container>
+
+

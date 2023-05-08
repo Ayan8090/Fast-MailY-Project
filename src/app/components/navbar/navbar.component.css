@@ -1,0 +1,45 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+.example-container {
+  width: 100%;
+  height: 100%;
+  box-shadow: 5px 5px 10px rgb(226, 226, 226)
+}
+
+
+.active{
+  background-color: blueviolet;
+
+}
+
+.list-group-item{ border-radius:0;
+border:0;
+width: 100%;
+}
+.list-group-item>.list-group-item>a{
+  padding-left: 60px;
+  padding-right: 60px;
+  background-color: blueviolet;
+}
+
+.list-group {
+  width: 100%;
+  margin: 50px;
+
+}
+
+.itmes-name{
+padding: 80px;
+text-decoration: none;
+color:black;
+
+}
+
+
+.sideNav-item:hover {
+  background-color: rgb(235, 235, 235);
+  color: rgb(0, 0, 0);
+}
+
+

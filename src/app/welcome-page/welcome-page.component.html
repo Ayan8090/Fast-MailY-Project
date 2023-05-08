@@ -1,0 +1,65 @@
+<div class="row d-flex justify-content-center">
+
+  <div class="col-8 ">
+    <div class="container ">
+
+
+    <div class="d-flex justify-content-center">
+    <form class="m-2 w-100">
+      <div class="text-center"> <img class="w-25" src="https://i.imgur.com/zWJIO39.png" alt=""></div>
+
+      <div class="form-group">
+       <div class="row">
+
+        <div class="col-md m-1">  <input [(ngModel)]="email.to" name="to" type="email" class="form-control " id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="To">
+        </div>
+        <div class="col-md m-1"> <input [(ngModel)]="email.subject" name="subject" type="email" class="form-control " id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Subject">
+        </div>
+       </div>
+
+      </div>
+      <div class="form-group mt-4">
+       <!-- app.component.html -->
+
+    <ckeditor [(ngModel)]="editorData" name="text" [editor]="Editor" data="editorData"></ckeditor>
+
+      </div>
+
+       <div class="d-flex justify-content-center">
+      <button (click)="onMailSubmit()" mat-stroked-button color="primary" class="w-100 mt-4 mx-2" type="submit">Send</button>
+      <button (click)="onMailSave()"  mat-stroked-button color="accent" class="w-100 mt-4 mx-2" type="submit">Save</button>
+      <button (click)="ClearAll();" mat-stroked-button color="warn" class="w-100 mt-4 mx-2" type="submit">Clear</button>
+    </div>
+    </form>
+    </div>
+
+    </div>
+
+
+  </div>
+  <div class="col d-flex align-items-center ">
+
+    <div class="container pt-5">
+
+    <mat-accordion *ngFor="let item of SaveMails">
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{item.to}}
+          </mat-panel-title>
+
+        </mat-expansion-panel-header>
+        <h5>{{item.subject}}</h5>
+        <p>{{item.text}}</p>
+      </mat-expansion-panel>
+
+    </mat-accordion>
+
+    <button (click)=" ClearAll()" class="mt-2" mat-flat-button color="primary">Clear all</button>
+
+  </div>
+</div>
+
+</div>
+
+
