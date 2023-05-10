@@ -2,13 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { Token } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginServiceService {
 
-  constructor(private http: HttpClient,private snack:MatSnackBar) { }
+  constructor(private http: HttpClient,private snack:MatSnackBar,private router:Router) { }
 
   url= "http://localhost:8080/"
 
@@ -42,7 +43,7 @@ export class LoginServiceService {
     const LoginUser = JSON.parse(user);
 
     if ( LoginUser.email == token.username && LoginUser.password == token.password) {
-      window.location.href = "/dashboard";
+      this.router.navigate(["dashboard"]);
       this.snack.open("You have login successfully.","Close");
       return true
     }else{

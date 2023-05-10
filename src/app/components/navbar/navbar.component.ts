@@ -25,8 +25,8 @@ export class NavbarComponent {
  userName=""
 
  sideNav=[
- {title:"Home",Link:"",fun:"dashboard"},
- {title:"Profile",Link:"dashboard",fun:""},
+ {title:"Home",Link:"/dashboard",fun:"dashboard"},
+ {title:"Profile",Link:"/dashboard",fun:""},
  {title:"Drafts",Link:"",fun:''},
  {title:"Send",Link:"",fun:''},
 

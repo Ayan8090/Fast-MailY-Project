@@ -16,20 +16,20 @@ export class RegisterComponent {
     contact:"",
     email:"",
     password:"",
-    checkBox:false
+    checkBox:false,
     }
 
 constructor(private LoginServiceService:LoginServiceService , private router:Router, private snack:MatSnackBar) { }
 
   onRegiter(){
 
-  if (this.RegisterCredentials.checkBox=true) {
-    this.LoginServiceService.DoLRegister(this.RegisterCredentials);
+  if (this.RegisterCredentials.checkBox!=true) {
+    this.snack.open("Signup failed You are not agree terms and Condition..","Close");
+  }
+ else{
+  this.LoginServiceService.DoLRegister(this.RegisterCredentials);
    this.router.navigate([""]);
    this.snack.open("You have successfully Registered.","Close");
-  }
-
-  this.snack.open("Sorry you have to check the terms and Condition..","Close");
-
+ }
   }
 }

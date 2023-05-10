@@ -11,3 +11,25 @@
   margin-left: 8px;
 }
 
+.icons-Image{
+  width: 200px !important;
+    }
+
+@media only screen and (max-width: 1200px){
+  .icons-Image{
+width: 200px !important;
+  }
+}
+@media only screen and (max-width: 600px){
+/*Big smartphones [426px -> 600px]*/
+.icons-Image{
+  width: 200px !important;
+}
+}
+@media only screen and (max-width: 425px){
+/*Small smartphones [325px -> 425px]*/
+.icons-Image{
+  width: 200px !important;
+}
+}
+

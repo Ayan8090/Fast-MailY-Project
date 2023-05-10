@@ -1,21 +1,21 @@
 <form class="m-5">
-  <h1 class="text-center title-h1 primary" >Automailify</h1>
-
+    <div class="text-center"> <img class="icons-Image" src="https://i.imgur.com/zWJIO39.png" alt=""></div>
+    <h5 class="text-center">Say Goodbye to Manual Emails<br> Simplify your Workflow with Our Email Automation Software.</h5>
   <div class="form-group">
 
-    <input  name="name" [(ngModel)]="RegisterCredentials.name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Name">
+    <input  name="name" [(ngModel)]="RegisterCredentials.name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Name">
 
   </div>
 
   <div class="form-group">
 
-    <input name="contact" [(ngModel)]="RegisterCredentials.contact" ngModel="credentials.username" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Contact">
+    <input name="contact" [(ngModel)]="RegisterCredentials.contact" ngModel="credentials.username" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Contact">
 
   </div>
 
   <div class="form-group">
 
-    <input name="email" [(ngModel)]="RegisterCredentials.email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <input name="email" [(ngModel)]="RegisterCredentials.email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
 
   </div>
   <div class="form-group">
@@ -25,10 +25,10 @@
 
 
   <div class="form-group form-check mt-4">
-    <input [(ngModel)]="RegisterCredentials.checkBox" type="checkbox" class="form-check-input" id="exampleCheck1">
+    <input [(ngModel)]="RegisterCredentials.checkBox" name="CheckBox" type="checkbox" class="form-check-input" id="exampleCheck1">
     <label class="form-check-label " for="exampleCheck1">Agree with Term & Condition</label>
   </div>
-  <button (click)="onRegiter()" mat-raised-button color="primary" class="w-100 mt-4">Login</button>
+  <button (click)="onRegiter()" mat-raised-button color="primary" class="w-100 mt-4">Sign up</button>
  <h3 class="text-center pt-3">You are new ? <a routerLink="" class="text-decoration-none">Sign in</a></h3>
 
 </form>
